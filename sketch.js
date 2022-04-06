@@ -28,8 +28,8 @@ ironManSongsObject[2] = new Song("Shoot To Thrill", "AC/DC", "5:17", 1380, 790, 
 let spiderManSongsObject = [];
 
 spiderManSongsObject[0] = new Song("Sunflower", "Post Malone", "3:13", 1380, 450, 0);
-spiderManSongsObject[1] = new Song("Its On Again","Alishia Keys","3:50", 1380, 620, 1 );
-spiderManSongsObject[2] = new Song("Vacations","The GoGhost","3:00", 1380, 790, 2 );
+spiderManSongsObject[1] = new Song("Its On Again","Alicia Keys","3:50", 1380, 620, 1 );
+spiderManSongsObject[2] = new Song("Vacations","The Go-Go's","3:00", 1380, 790, 2 );
 
 
 
