@@ -1,5 +1,5 @@
 let backGrounds = [];
-let screen = 0;
+let screen = 3;
 let ironManPlaylistButton = new Button(506, 346, "ironman", 0, 0, 400);
 let spiderManPlaylistButton = new Button(1066, 346, "spiderman", 0, 0, 400);
 let backButton = new Button(65, 50, "spiderman", 0, 0, 100);
@@ -39,6 +39,7 @@ function preload() {
   backGrounds[0] = loadImage("./assets/playlist.png");
   backGrounds[1] = loadImage("./assets/spiderMan.png");
   backGrounds[2] = loadImage("./assets/ironMan.png");
+  backGrounds[3] = loadImage("./assets/pantallaInicio.png");
 
   //ironMan Images
   ironManImages[0] = loadImage("./assets/acdc.png");
@@ -66,6 +67,9 @@ function setup() {
   createCanvas(1980, 1080);
   
 
+  if(screen === 1){
+
+  }
     volumeSlider = createSlider(0, 1, 0.5, 0.01);
     volumeSlider.position(374, 910);
     volumeSlider.style('width', '400px');
@@ -80,8 +84,10 @@ function draw() {
   textSize(100);
   fill(255);
 
+
   //While in screen 0
-  if (screen == 0) {
+  
+  if (screen === 3 || screen === 0) {
     volumeSlider.style('display', 'none');
 
     ironManSongs[songIndex].stop();
@@ -199,6 +205,12 @@ function mousePressed() {
         play();
         console.log(songIndex);
       }
+    }
+  }
+
+  if(screen == 3){
+    if (dist(488, 740 , mouseX, mouseY) < 100) { 
+      screen = 0;
     }
   }
   
